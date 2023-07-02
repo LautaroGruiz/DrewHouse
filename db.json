@@ -1,0 +1,16 @@
+{
+  "productos": [
+    {
+      "producto": "",
+      "precio": "",
+      "stock": "",
+      "id": 3
+    },
+    {
+      "producto": "Pepsi",
+      "precio": "156",
+      "stock": "5641685",
+      "id": 4
+    }
+  ]
+}
