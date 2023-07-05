@@ -18,10 +18,20 @@ const ProductosContext = ({ children }) => {
   const deleteProduct = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/productos/${id}`);
-      const updatedProducts = productos.filter(
-        (producto) => producto.id !== id
+      const deleteProduct = productos.filter((producto) => producto.id !== id);
+      setProductos(deleteProduct);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const putProducto = async (producto) => {
+    try {
+      await axios.put(
+        `http://localhost:8080/productos/${producto.id}`,
+        producto
       );
-      setProductos(updatedProducts);
+      await getProductos();
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +43,7 @@ const ProductosContext = ({ children }) => {
 
   return (
     <ContextoDeProductos.Provider
-      value={{ productos, setProductos, deleteProduct }}
+      value={{ productos, setProductos, deleteProduct, putProducto }}
     >
       {children}
     </ContextoDeProductos.Provider>
