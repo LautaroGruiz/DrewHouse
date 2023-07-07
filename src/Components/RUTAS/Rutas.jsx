@@ -1,16 +1,27 @@
 import { Routes, Route } from "react-router-dom";
 import CardProduct from "../CARD/CardProduct";
 import Administrador from "../ADMINISTRADOR/Administrador";
-import InicarSesion from "../../Pages/InicarSesion";
-import Registrarse from "../../Pages/Registrarse"
+import Registrarse from "../../Pages/Registrarse";
+import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIiniciarSesion";
 
 const Rutas = () => {
   return (
     <Routes>
-      <Route path="/addProducto" element={<Administrador />} />
-      <Route path="/tienda" element={<CardProduct />} />
-      <Route path="/InicioDeSesion" element={<InicarSesion />} />
-      <Route path="/Registrarse" element={<Registrarse />} />
+      <Route
+        onClick={<ModalIiniciarSesion />}
+        path="/addProducto"
+        element={<Administrador />}
+      />
+      <Route
+        onClick={<ModalIiniciarSesion />}
+        path="/tienda"
+        element={<CardProduct />}
+      />
+      <Route
+        onClick={<ModalIiniciarSesion />}
+        path="/Registrarse"
+        element={<Registrarse />}
+      />
     </Routes>
   );
 };

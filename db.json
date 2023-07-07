@@ -6,5 +6,14 @@
       "stock": "3",
       "id": 1
     }
+  ],
+  "users": [
+    {
+      "nombre": "Lautaro",
+      "apellido": "Gonzalez Ruiz",
+      "email": "lautagruiz911@gmail.com",
+      "contraseña": "1234",
+      "id": 1
+    }
   ]
 }
