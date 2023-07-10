@@ -1,0 +1,12 @@
+.LogoHeader {
+    width: 10rem;
+    /* border: 1px solid rgb(0, 255, 149); */
+}
+.titulosDeNav {
+    /* border: 1px solid rgb(47, 0, 255); */
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0.8px;
+    color: black;
+}

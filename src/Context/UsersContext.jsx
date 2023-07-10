@@ -16,12 +16,17 @@ const UsersContext = ({ children }) => {
     }
   };
 
+  const logOut = () => {
+    localStorage.removeItem("user")
+    window.location.href= "/"
+  }
+
   useEffect(() => {
     getUsers();
   }, []);
 
   return (
-    <ContextoDeUsuarios.Provider value={{ users, setUsers }}>
+    <ContextoDeUsuarios.Provider value={{ users, setUsers, logOut }}>
       {children}
     </ContextoDeUsuarios.Provider>
   );

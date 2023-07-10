@@ -1,0 +1,70 @@
+.bannerWelcome {
+  /* border: 1px solid red; */
+  height: 15rem;
+  text-align: right;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.bannerWelcome p {
+  font-size: 80px;
+  line-height: 70px;
+  color: #2c2c2cd3;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  font-family: "Architects Daughter", cursive;
+}
+.contenedorVistaPrevia {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.fila-uno-home {
+  /* border: 1px solid rgb(255, 0, 234); */
+  height: 25rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fila-uno-home h6 {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+}
+.fila-uno-home img {
+  width: 100%;
+}
+.fila-uno-home p {
+  display: none;
+}
+.botonVerMas {
+  display: none;
+}
+.fila-uno-home:hover {
+  border: 3px solid #fcc75c;
+  padding: 1rem;
+}
+.fila-uno-home:hover p {
+  display: block;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+  color: black;
+  margin-bottom: 10px;
+}
+.fila-uno-home:hover .botonVerMas {
+  display: block;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  background-color: #FBBF13;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  border: none;
+}

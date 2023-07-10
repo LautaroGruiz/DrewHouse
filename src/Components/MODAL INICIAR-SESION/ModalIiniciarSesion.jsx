@@ -1,10 +1,11 @@
 import { useState, useContext } from "react";
 import { ContextoDeUsuarios } from "../../Context/UsersContext";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 const ModalIiniciarSesion = () => {
-  const [email, setEmail] = useState();
-  const [contraseña, setContraseña] = useState();
+  const [email, setEmail] = useState("");
+  const [contraseña, setContraseña] = useState("");
 
   const { users } = useContext(ContextoDeUsuarios);
   console.log(users);
@@ -12,15 +13,27 @@ const ModalIiniciarSesion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const user = users.find(user => user.email === email && user.contraseña === contraseña);
+      const user = users.find(
+        (user) => user.email === email && user.contraseña === contraseña
+      );
       if (user) {
-        alert("Usuario Encontrado")
-      }
-      else {
-        alert("Usuario no encontrado")
+        localStorage.setItem("user", JSON.stringify(user));
+        const tagUsuario = JSON.parse(localStorage.getItem("user"));
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Bienvenido " + tagUsuario.nombreDeUsuario,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      } else {
+        alert("Usuario no encontrado");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -44,21 +57,19 @@ const ModalIiniciarSesion = () => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="precio" className="form-label">
+                <label htmlFor="contraseña" className="form-label">
                   Contraseña
                 </label>
                 <input
-                  type="number"
+                  type="password"
                   className="form-control"
                   value={contraseña}
                   onChange={(e) => setContraseña(e.target.value)}
                   name="contraseña"
-                  aria-describedby="precio"
                 />
               </div>
               <Button type="submit" variant="outline-success">
-                {" "}
-                Ingresar{" "}
+                Ingresar
               </Button>
             </form>
           </Col>

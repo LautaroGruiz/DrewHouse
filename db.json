@@ -1,7 +1,7 @@
 {
   "productos": [
     {
-      "producto": "Fernet",
+      "producto": "Cerveza Corona",
       "precio": "500",
       "stock": "3",
       "id": 1
@@ -9,11 +9,67 @@
   ],
   "users": [
     {
-      "nombre": "Lautaro",
-      "apellido": "Gonzalez Ruiz",
-      "email": "lautagruiz911@gmail.com",
+      "nombreYapellido": "Lautaro Gonzalez Ruiz",
+      "nombreDeUsuario": "Administrador",
+      "email": "admin@gmail.com",
       "contraseña": "1234",
       "id": 1
+    },
+    {
+      "nombreYapellido": "Agustin Quiroga",
+      "nombreDeUsuario": "Agustin",
+      "email": "agustin@gmail.com",
+      "contraseña": "1234",
+      "id": 2
+    },
+    {
+      "nombreYapellido": "Victoria Rodriguez",
+      "nombreDeUsuario": "Vico",
+      "email": "vico@gmail.com",
+      "contraseña": "1234",
+      "id": 3
+    },
+    {
+      "nombreYapellido": "Daniel Gonzalez",
+      "nombreDeUsuario": "Dani",
+      "email": "dani@gmail.com",
+      "contraseña": "1234",
+      "id": 4
+    },
+    {
+      "nombreYapellido": "Santiago Aragon",
+      "nombreDeUsuario": "Santi",
+      "email": "santi111@gmail.com",
+      "contraseña": "123",
+      "id": 5
+    },
+    {
+      "nombreYapellido": "Mauro Lombardo",
+      "nombreDeUsuario": "Duki",
+      "email": "dukissj@gmail.com",
+      "contraseña": "123",
+      "id": 6
+    },
+    {
+      "nombreYapellido": "Mario Gonzalez",
+      "nombreDeUsuario": "Khea",
+      "email": "khea@gmail.com",
+      "contraseña": "123",
+      "id": 7
+    },
+    {
+      "nombreYapellido": "Facundo Rodriguez",
+      "nombreDeUsuario": "KQ",
+      "email": "kq@gmail.com",
+      "contraseña": "123",
+      "id": 8
+    },
+    {
+      "nombreYapellido": "Justin Bieber",
+      "nombreDeUsuario": "Justin",
+      "email": "jb@gmail.com",
+      "contraseña": "123",
+      "id": 9
     }
   ]
 }

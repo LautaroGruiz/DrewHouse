@@ -1,10 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const FormRegistro = () => {
   const [dataUser, setDataUsers] = useState({
-    nombre: "",
-    apellido: "",
+    nombreYapellido: "",
+    nombreDeUsuario: "",
     email: "",
     contraseña: "",
   });
@@ -13,44 +14,67 @@ const FormRegistro = () => {
     setDataUsers({ ...dataUser, [e.target.name]: e.target.value });
   };
 
-  const handleSumbit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      axios.post("http://localhost:8080/users", dataUser);
-      setDataUsers({
-        nombre: "",
-        apellido: "",
-        email: "",
-        contraseña: "",
-      });
-    } catch (error) {
-      console.log(error);
+
+    // Validación de campos
+    if (
+      dataUser.nombreYapellido &&
+      dataUser.nombreDeUsuario &&
+      dataUser.email &&
+      dataUser.contraseña
+    ) {
+      try {
+        await axios.post("http://localhost:8080/users", dataUser);
+        setDataUsers({
+          nombreYapellido: "",
+          nombreDeUsuario: "",
+          email: "",
+          contraseña: "",
+        });
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "¡Te has registrado con exito!",
+          showConfirmButton: false,
+          timer: 2000,
+        });
+        // Redirigir al usuario a la página "/tienda"
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      // Mostrar mensaje de error o realizar alguna acción en caso de campos incompletos
+      alert("Por favor, completa todos los campos.");
     }
   };
 
   return (
     <>
-      <form onSubmit={handleSumbit}>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="nombre" className="form-label">
-            Nombre
+          <label htmlFor="nombreYapellido" className="form-label">
+            Nombre y apellido
           </label>
           <input
             type="text"
-            name="nombre"
-            value={dataUser.nombre}
+            name="nombreYapellido"
+            value={dataUser.nombreYapellido}
             onChange={handleChange}
             className="form-control"
           />
         </div>
         <div>
-          <label htmlFor="apellido" className="form-label">
-            Apellido
+          <label htmlFor="nombreDeUsuario" className="form-label">
+            Nombre de usuario
           </label>
           <input
             type="text"
-            name="apellido"
-            value={dataUser.apellido}
+            name="nombreDeUsuario"
+            value={dataUser.nombreDeUsuario}
             onChange={handleChange}
             className="form-control"
           />
