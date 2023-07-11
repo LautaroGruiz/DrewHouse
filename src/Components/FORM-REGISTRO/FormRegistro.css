@@ -1,0 +1,51 @@
+.contenedorForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffec;
+    /* border: 1px solid red; */
+    height: 91vh;
+}
+.formularioRegistrar {
+    /* border: 1px solid red; */
+    width: 50%;
+}
+.crearCuenta {
+    font-family: 'Rubik', sans-serif;
+    line-height: 20.8px;
+    letter-spacing: 0.8px;
+    color: black;
+    padding-bottom: 1rem;
+}
+.textosFormularioRegistrar {
+    font-family: 'Rubik', sans-serif;
+    line-height: 20.8px;
+    letter-spacing: 0.8px;
+    color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* border: 1px solid rgb(47, 0, 255); */
+}
+.form-control {
+    border: 1px solid gray;
+    border-radius: 0;
+}
+.contenedorBotonRegistrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    /* border: 1px solid rgb(47, 0, 255); */
+}
+.botonRegistrar {
+    font-family: 'Rubik', sans-serif;
+    line-height: 20.8px;
+    letter-spacing: 0.8px;
+    color: black;
+    background-color: #FBBF13;
+}
+.botonRegistrar:hover {
+    background-color: black;
+    color: #FBBF13;
+}

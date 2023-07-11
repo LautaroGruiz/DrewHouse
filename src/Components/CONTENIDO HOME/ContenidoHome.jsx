@@ -10,7 +10,7 @@ const ContenidoHome = () => {
       </div>
       <div className="contenedorVistaPrevia">
         <div className="fila-uno-home">
-          <h6>
+          <h6 className="tituloDeProducto">
             mascot oversized hoodie <br /> pacific blue
           </h6>
           <img src="src\Image\HOME-IMAGE\mascotoblue.jpg" />
@@ -18,7 +18,7 @@ const ContenidoHome = () => {
           <button className="botonVerMas">Ver mas</button>
         </div>
         <div className="fila-uno-home">
-          <h6>
+          <h6 className="tituloDeProducto">
             mascot corduroy bucket hat
             <br /> royal blue
           </h6>
@@ -27,7 +27,7 @@ const ContenidoHome = () => {
           <button className="botonVerMas">Ver mas</button>
         </div>
         <div className="fila-uno-home">
-          <h6>
+          <h6 className="tituloDeProducto">
             sketch mascot crewneck
             <br /> peacock
           </h6>
@@ -36,7 +36,7 @@ const ContenidoHome = () => {
           <button className="botonVerMas">Ver mas</button>
         </div>
         <div className="fila-uno-home">
-          <h6>
+          <h6 className="tituloDeProducto">
             drew house away jersey
             <br /> biscotti
           </h6>

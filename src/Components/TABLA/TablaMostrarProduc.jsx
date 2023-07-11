@@ -2,6 +2,7 @@ import { Table, Modal } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { ContextoDeProductos } from "../../Context/ProductosContext";
 import ModalEditar from "../MODAL EDITAR/ModalEditar";
+import "./TablaMostrarProduc.css";
 
 function TablaMostrarProduct() {
   const { productos, deleteProduct } = useContext(ContextoDeProductos);
@@ -22,22 +23,22 @@ function TablaMostrarProduct() {
       {productos === undefined ? (
         <h1>No hay productos disponibles</h1>
       ) : (
-        <Table responsive>
+        <Table responsive className="tablaProductos">
           <thead>
             <tr>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>Stock</th>
-              <th>Acciones</th>
+              <th className="titulosTabla thProducto">Producto</th>
+              <th className="titulosTabla thPrecio">Precio</th>
+              <th className="titulosTabla thPrecio">Stock</th>
+              <th className="titulosTabla thPrecio sinborde">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {productos.map((producto) => (
               <tr key={producto.id}>
-                <td>{producto.producto}</td>
-                <td>{producto.precio}</td>
-                <td>{producto.stock}</td>
-                <td>
+                <td className="tdProducto">{producto.producto}</td>
+                <td className="tdProducto">{producto.precio}</td>
+                <td className="tdProducto">{producto.stock}</td>
+                <td className="tdProducto">
                   <button
                     onClick={() => deleteProduct(producto.id)}
                     className="btn btn-danger"
@@ -61,7 +62,10 @@ function TablaMostrarProduct() {
           <Modal.Title>Editar Producto</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <ModalEditar productoEditado={productoEditado} handleClose={handleClose} />
+          <ModalEditar
+            productoEditado={productoEditado}
+            handleClose={handleClose}
+          />
         </Modal.Body>
       </Modal>
     </>

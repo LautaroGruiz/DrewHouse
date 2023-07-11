@@ -33,51 +33,61 @@ const Productos = () => {
   return (
     <>
       <main className="main">
-        <form onSubmit={handleSumbit}>
-          <div className="mb-3">
-            <label htmlFor="producto" className="form-label">
+        <form onSubmit={handleSumbit} className="formularioAddProducto">
+          <div className="mb-3 cajaInput">
+            <label
+              htmlFor="producto"
+              className="form-label textosFormularioRegistrar"
+            >
               Producto
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control inputAddProducto"
               value={productos.producto}
               onChange={handleChange}
               name="producto"
               aria-describedby="producto"
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="precio" className="form-label">
+          <div className="mb-3 cajaInput">
+            <label
+              htmlFor="precio"
+              className="form-label textosFormularioRegistrar"
+            >
               Precio
             </label>
             <input
               type="number"
-              className="form-control"
+              className="form-control inputAddProducto"
               value={productos.precio}
               onChange={handleChange}
               name="precio"
               aria-describedby="precio"
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="stock" className="form-label">
+          <div className="mb-3 cajaInput">
+            <label
+              htmlFor="stock"
+              className="form-label textosFormularioRegistrar"
+            >
               Stock
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control inputAddProducto"
               value={productos.stock}
               onChange={handleChange}
               name="stock"
               aria-describedby="stock"
             />
           </div>
-
-          <Button type="submit" variant="outline-success">
-            {" "}
-            Agregar Producto{" "}
-          </Button>
+          <div className="inputAddProducto cajaBotonAddProducto">
+            <Button type="submit" variant="outline-success" className="botonRegistrar botonAddProducto">
+              {" "}
+              Agregar producto{" "}
+            </Button>
+          </div>
         </form>
         <SeccionTabla />
       </main>

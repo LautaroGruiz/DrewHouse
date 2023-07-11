@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Container, Nav, Navbar, Modal, NavDropdown } from "react-bootstrap";
-import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIiniciarSesion";
+import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIniciarSesion";
 import { ContextoDeUsuarios } from "../../Context/UsersContext";
 import "./Header.css";
 

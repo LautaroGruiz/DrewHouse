@@ -12,12 +12,14 @@ const CardProduct = () => {
         <h1>Cargando...</h1>
       ) : (
         productos.map((producto) => (
-          <Card key={producto.id} style={{ width: "18rem" }}>
+          <Card key={producto.id} className="fila-uno-home">
             <Card.Body>
-              <Card.Title>{producto.producto}</Card.Title>
+              <Card.Title className="tituloDeProducto">
+                {producto.producto}
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
               <Card.Text>
-                Precio: {producto.precio} <br />
+                ${producto.precio} ARS <br />
                 Stock: {producto.stock}
               </Card.Text>
             </Card.Body>

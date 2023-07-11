@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import CardProduct from "../CARD/CardProduct";
 import Administrador from "../ADMINISTRADOR/Administrador";
 import Registrarse from "../../Pages/Registrarse";
-import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIiniciarSesion";
+import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIniciarSesion";
 import Home from "../../Pages/Home";
 
 const Rutas = () => {

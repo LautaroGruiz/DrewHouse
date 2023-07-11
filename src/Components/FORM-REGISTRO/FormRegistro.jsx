@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import "./FormRegistro.css";
 
 const FormRegistro = () => {
   const [dataUser, setDataUsers] = useState({
@@ -54,59 +55,76 @@ const FormRegistro = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nombreYapellido" className="form-label">
-            Nombre y apellido
-          </label>
-          <input
-            type="text"
-            name="nombreYapellido"
-            value={dataUser.nombreYapellido}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label htmlFor="nombreDeUsuario" className="form-label">
-            Nombre de usuario
-          </label>
-          <input
-            type="text"
-            name="nombreDeUsuario"
-            value={dataUser.nombreDeUsuario}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={dataUser.email}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label htmlFor="contraseña" className="form-label">
-            Contraseña
-          </label>
-          <input
-            type="password"
-            name="contraseña"
-            value={dataUser.contraseña}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Registrarme
-        </button>
-      </form>
+      <div className="contenedorForm">
+        <h2 className="crearCuenta">Crea una cuenta</h2>
+        <form onSubmit={handleSubmit} className="formularioRegistrar">
+          <div>
+            <label
+              htmlFor="nombreYapellido"
+              className="form-label textosFormularioRegistrar"
+            >
+              Nombre y apellido
+            </label>
+            <input
+              type="text"
+              name="nombreYapellido"
+              value={dataUser.nombreYapellido}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="nombreDeUsuario"
+              className="form-label textosFormularioRegistrar"
+            >
+              Nombre de usuario
+            </label>
+            <input
+              type="text"
+              name="nombreDeUsuario"
+              value={dataUser.nombreDeUsuario}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="email"
+              className="form-label textosFormularioRegistrar"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={dataUser.email}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="contraseña"
+              className="form-label textosFormularioRegistrar"
+            >
+              Contraseña
+            </label>
+            <input
+              type="password"
+              name="contraseña"
+              value={dataUser.contraseña}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="contenedorBotonRegistrar">
+            <button type="submit" className="btn botonRegistrar">
+              Registrarme
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./Components/FOOTER/Footer";
 import Header from "./Components/HEADER/Header";
 import Rutas from "./Components/RUTAS/Rutas";
 import ProductosContext from "./Context/ProductosContext";
@@ -11,6 +12,7 @@ function App() {
         <ProductosContext>
           <Header />
           <Rutas />
+          <Footer />
         </ProductosContext>
       </UsersContext>
     </>
