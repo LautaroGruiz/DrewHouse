@@ -36,17 +36,17 @@ function TablaMostrarProduct() {
             {productos.map((producto) => (
               <tr key={producto.id}>
                 <td className="tdProducto">{producto.producto}</td>
-                <td className="tdProducto">{producto.precio}</td>
+                <td className="tdProducto">${producto.precio}</td>
                 <td className="tdProducto">{producto.stock}</td>
                 <td className="tdProducto">
                   <button
                     onClick={() => deleteProduct(producto.id)}
-                    className="btn btn-danger"
+                    className="btn btn-danger botonEliminar"
                   >
                     Eliminar
                   </button>
                   <button
-                    className="btn btn-warning"
+                    className="btn btn-warning botonEditar"
                     onClick={() => editarProducto(producto)}
                   >
                     Editar

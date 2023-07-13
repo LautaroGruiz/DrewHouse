@@ -1,5 +1,5 @@
 .tablaProductos {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   font-family: "Rubik", sans-serif;
   line-height: 20.8px;
   letter-spacing: 0.8px;
@@ -26,10 +26,27 @@
 }
 
 .tdProducto {
-  /* border: 1px solid seagreen; */
+  border-right: 1px solid black;
+  border-left: 1px solid black;
   text-align: center;
   font-family: "Rubik", sans-serif;
   line-height: 20.8px;
   letter-spacing: 0.8px;
   color: black !important;
 }
+.botonEliminar {
+  margin-right: 0.5rem;
+  background-color: red;
+}
+.botonEditar {
+  margin-left: 0.5rem;
+  background-color: black;
+  color: #fbbf13;
+  border: none;
+}
+/* .controlStockOjos {
+  display: none;
+}
+.estilosEnControlStock {
+  height: 15rem;
+} */

@@ -2,20 +2,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="contenedorSubscribir">
-        <div className="contenedorComunidad">
-          <h4>Únete a la comunidad</h4>
-          <div className="inputBoton">
-            <input type="email" name="subscriptor" placeholder="email" />
-            <button type="submit">subscribirse</button>
-          </div>
-        </div>
-        <div className="ojosDrew">
-          <div className="dibujoOjo"></div>
-          <div className="dibujoOjo"></div>
-        </div>
-      </div>
+    <footer className="estilosEnControlStock">
+     
       <div className="contenedorRedes">
         <div className="contenedorAyuda">
           <div className="help">
@@ -71,8 +59,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="contenedorStore">
-            <img src="src\Image\FOOTER-IMAGE\appStore.png" alt="" />
-            <img src="src\Image\FOOTER-IMAGE\googlePlay.png" alt="" />
+          <img src="src\Image\FOOTER-IMAGE\appStore.png" alt="" />
+          <img src="src\Image\FOOTER-IMAGE\googlePlay.png" alt="" />
         </div>
       </div>
     </footer>

@@ -4,6 +4,8 @@ import Administrador from "../ADMINISTRADOR/Administrador";
 import Registrarse from "../../Pages/Registrarse";
 import ModalIiniciarSesion from "../MODAL INICIAR-SESION/ModalIniciarSesion";
 import Home from "../../Pages/Home";
+import ContenidoDetalle from "../CONTENIDO DETALLE/ContenidoDetalle";
+import Carrito from "../../Pages/Carrito";
 
 const Rutas = () => {
   const usuarioLogeado = JSON.parse(localStorage.getItem("user"));
@@ -12,21 +14,11 @@ const Rutas = () => {
     <Routes>
       {usuarioLogeado !== null ? (
         <>
-          <Route
-            onClick={<ModalIiniciarSesion />}
-            path="/"
-            element={<Home />}
-          />
-          <Route
-            onClick={<ModalIiniciarSesion />}
-            path="/tienda"
-            element={<CardProduct />}
-          />
-          <Route
-            onClick={<ModalIiniciarSesion />}
-            path="/addProducto"
-            element={<Administrador />}
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/tienda" element={<CardProduct />} />
+          <Route path="/addProducto" element={<Administrador />} />
+          <Route path="/detalle" element={<ContenidoDetalle />} />
+          <Route path="/carrito" element={<Carrito />} />
         </>
       ) : (
         <>
@@ -45,6 +37,7 @@ const Rutas = () => {
             path="/tienda"
             element={<CardProduct />}
           />
+          <Route path="/detalle" element={<ContenidoDetalle />} />
         </>
       )}
     </Routes>

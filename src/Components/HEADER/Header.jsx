@@ -52,6 +52,9 @@ const Header = () => {
                       Cerrar sesión
                     </NavDropdown.Item>
                   </NavDropdown>
+                  <Nav.Link className="titulosDeNav" href="/carrito">
+                    Carrito
+                  </Nav.Link>
                 </>
               ) : (
                 <>
@@ -70,11 +73,15 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        className="ventanaModalInicarSesion"
+      >
+        <Modal.Header closeButton className="headerModal">
           <Modal.Title>Ingresa tu usuario</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="headerModal bodyModal">
           <ModalIiniciarSesion handleClose={handleClose} />
         </Modal.Body>
       </Modal>

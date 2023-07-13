@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { ContextoDeUsuarios } from "../../Context/UsersContext";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
+import "./ModalIniciarSesion.css" 
 
 const ModalIiniciarSesion = () => {
   const [email, setEmail] = useState("");
@@ -44,12 +45,12 @@ const ModalIiniciarSesion = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="email" className="form-label">
+                <label htmlFor="email" className="form-label textoLabelEmail">
                   Email
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control inputIniciarSesion"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   name="email"
@@ -57,18 +58,18 @@ const ModalIiniciarSesion = () => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="contraseña" className="form-label">
+                <label htmlFor="contraseña" className="form-label textoLabelEmail">
                   Contraseña
                 </label>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control inputIniciarSesion"
                   value={contraseña}
                   onChange={(e) => setContraseña(e.target.value)}
                   name="contraseña"
                 />
               </div>
-              <Button type="submit" variant="outline-success">
+              <Button type="submit" variant="outline-success" className="botonIniciarSesion">
                 Ingresar
               </Button>
             </form>

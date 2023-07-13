@@ -1,5 +1,4 @@
 .bannerWelcome {
-  /* border: 1px solid red; */
   height: 15rem;
   text-align: right;
   display: flex;
@@ -16,58 +15,91 @@
   font-family: "Architects Daughter", cursive;
 }
 .contenedorVistaPrevia {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #ffffec;
   padding-bottom: 2rem;
 }
-.fila-uno-home {
-  /* border: 1px solid rgb(255, 0, 234); */
-  height: 25rem;
-  width: 20rem;
+.comprarTodo {
+  padding-bottom: 2.5rem;
+  display: flex;
+  background-color: #ffffec;
+  cursor: pointer;
+}
+.comprarTodo img {
+  width: 92%;
+  height: 100%;
+}
+.textoComprarTodo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+  transition: 1s;
+}
+.textoComprarTodo h3 {
+  vertical-align: bottom;
+  font-family: "Rubik", sans-serif;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+  font-size: 1.5rem;
+  color: #222222;
+  writing-mode: vertical-rl;
+  transition: 1s;
+}
+.comprarTodo:hover .textoComprarTodo {
+  background-color: black;
+}
+.comprarTodo:hover .textoComprarTodo h3 {
+  color: #fbbf13;
+}
+.contenedorSubscribir {
+  background-color: #ffc001;
+  height: 28rem;
+  display: flex;
+}
+.contenedorComunidad {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+.contenedorComunidad h4 {
+  font-family: "Rubik", sans-serif;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+  color: #222222;
+  padding-bottom: 1rem;
+}
+.inputBoton {
+  display: flex;
   align-items: center;
-  background-color: #ffffec;
 }
-.tituloDeProducto {
-  font-family: "Rubik", sans-serif;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20.8px;
-  letter-spacing: 0.8px;
+.inputBoton input {
+  width: 20rem;
+  height: 44px;
+  border: 1px solid #242424;
 }
-.fila-uno-home img {
-  width: 100%;
-}
-.fila-uno-home p {
-  display: none;
-}
-.botonVerMas {
-  display: none;
-}
-.fila-uno-home:hover {
-  border: 3px solid #fcc75c;
-  padding: 1rem;
-}
-.fila-uno-home:hover p {
-  display: block;
-  font-family: "Rubik", sans-serif;
-  text-align: center;
-  font-size: 13px;
-  line-height: 20.8px;
-  letter-spacing: 0.8px;
-  color: black;
-  margin-bottom: 10px;
-}
-.fila-uno-home:hover .botonVerMas {
-  display: block;
-  font-family: "Rubik", sans-serif;
-  color: black;
-  background-color: #fbbf13;
-  padding: 5px 10px 5px 10px;
-  border-radius: 3px;
+.inputBoton button {
+  height: 44px;
   border: none;
+  background-color: #242424;
+  color: white;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ojosDrew {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dibujoOjo {
+  height: 80%;
+  width: 10rem;
+  border-radius: 100%;
+  background-color: #222222;
 }

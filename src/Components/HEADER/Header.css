@@ -13,3 +13,17 @@
     letter-spacing: 0.8px;
     color: black;
 }
+.ventanaModalInicarSesion {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0.8px;
+    color: black;
+}
+.headerModal {
+    background-color: #ffffec;
+}
+.bodyModal {
+    height: 15.5rem;
+    border-radius: 5px;
+}

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { ContextoDeProductos } from "../../Context/ProductosContext";
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 const ModalEditar = ({ productoEditado, handleClose }) => {
@@ -16,13 +16,13 @@ const ModalEditar = ({ productoEditado, handleClose }) => {
     e.preventDefault();
     putProducto(producto);
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Producto editado con exito',
+      position: "center",
+      icon: "success",
+      title: "Producto editado con exito",
       showConfirmButton: false,
-      timer: 1500
-    })
-    handleClose()
+      timer: 1500,
+    });
+    handleClose();
   };
 
   return (
@@ -57,6 +57,22 @@ const ModalEditar = ({ productoEditado, handleClose }) => {
                   aria-describedby="precio"
                 />
               </div>
+              <div className="mb-3 cajaInput">
+                <label
+                  htmlFor="imagen"
+                  className="form-label textosFormularioRegistrar"
+                >
+                  URL de la imagen
+                </label>
+                <input
+                  type="url"
+                  className="form-control"
+                  value={producto.imagen}
+                  onChange={handleChange}
+                  name="imagen"
+                  aria-describedby="imagen"
+                />
+              </div>
               <div className="mb-3">
                 <label htmlFor="stock" className="form-label">
                   Stock
@@ -73,7 +89,7 @@ const ModalEditar = ({ productoEditado, handleClose }) => {
 
               <Button type="submit" variant="outline-success">
                 {" "}
-               Editar Producto{" "}
+                Editar Producto{" "}
               </Button>
             </form>
           </Col>

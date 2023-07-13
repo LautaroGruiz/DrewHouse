@@ -1,0 +1,23 @@
+.textoLabelEmail {
+  font-family: "Rubik", sans-serif;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+  color: black;
+}
+.inputIniciarSesion {
+  border: 1px solid rgba(128, 128, 128, 0.534) !important;
+}
+.botonIniciarSesion {
+  font-family: "Rubik", sans-serif;
+  line-height: 20.8px;
+  letter-spacing: 0.8px;
+  color: black;
+  background-color: #fbbf13;
+  border: none;
+  transition: 0.4s;
+  margin-top: 0.5rem;
+}
+.botonIniciarSesion:hover {
+  background-color: black;
+  color: #fbbf13;
+}

@@ -8,8 +8,10 @@ const Productos = () => {
   const [productos, setProductos] = useState({
     producto: "",
     precio: "",
+    imagen: "",
     stock: "",
   });
+
 
   const handleChange = (e) => {
     setProductos({ ...productos, [e.target.name]: e.target.value });
@@ -23,6 +25,7 @@ const Productos = () => {
       setProductos({
         producto: "",
         precio: "",
+        imagen: "",
         stock: "",
       });
     } catch (error) {
@@ -68,6 +71,22 @@ const Productos = () => {
           </div>
           <div className="mb-3 cajaInput">
             <label
+              htmlFor="imagen"
+              className="form-label textosFormularioRegistrar"
+            >
+              URL de la imagen
+            </label>
+            <input
+              type="url"
+              className="form-control inputAddProducto"
+              value={productos.imagen}
+              onChange={handleChange}
+              name="imagen"
+              aria-describedby="imagen"
+            />
+          </div>
+          <div className="mb-3 cajaInput">
+            <label
               htmlFor="stock"
               className="form-label textosFormularioRegistrar"
             >
@@ -83,7 +102,11 @@ const Productos = () => {
             />
           </div>
           <div className="inputAddProducto cajaBotonAddProducto">
-            <Button type="submit" variant="outline-success" className="botonRegistrar botonAddProducto">
+            <Button
+              type="submit"
+              variant="outline-success"
+              className="botonRegistrar botonAddProducto"
+            >
               {" "}
               Agregar producto{" "}
             </Button>
