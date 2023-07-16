@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import "./ContenidoDetalle.css";
 
 const ContenidoDetalle = () => {
@@ -10,6 +11,37 @@ const ContenidoDetalle = () => {
       setProductoSeleccionado(JSON.parse(producto));
     }
   }, []);
+
+  const enviarACarrito = () => {
+    const productosEnCarrito = localStorage.getItem("comprarProducto");
+    let nuevosProductos = [];
+
+    if (productosEnCarrito) {
+      nuevosProductos = JSON.parse(productosEnCarrito);
+
+      // Verificar si el producto ya existe en el carrito
+      const productoExistente = nuevosProductos.find(
+        (producto) => producto.id === productoSeleccionado.id
+      );
+
+      if (productoExistente) {
+        productoExistente.cantidad += 1; // Actualizar la cantidad del producto existente
+      } else {
+        nuevosProductos.push({ ...productoSeleccionado, cantidad: 1 }); // Agregar una nueva instancia del producto al carrito
+      }
+    } else {
+      // Agregar el primer producto al carrito
+      nuevosProductos.push({ ...productoSeleccionado, cantidad: 1 });
+    }
+    localStorage.setItem("comprarProducto", JSON.stringify(nuevosProductos));
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  };
 
   return (
     <div>
@@ -38,7 +70,7 @@ const ContenidoDetalle = () => {
               </div>
             </div>
             <div className="cajaBotonComprar">
-              <button>Añadir al carrito</button>
+              <button onClick={enviarACarrito}>Añadir al carrito</button>
             </div>
           </div>
         </div>
